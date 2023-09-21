@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 3D Rotating Image Gallery</title>
+    <link rel="stylesheet" href="/Album.css">
+   
+</head>
+<body>
+    <div class="box">
+        <span style="--i:1;"><img src="https://wallpaperaccess.com/download/1920-x-1080-anime-1783942" alt=""></span>
+        <span style="--i:2;"><img src="https://wallpaperaccess.com/download/1920-x-1080-anime-2801892" alt=""></span>
+        <span style="--i:3;"><img src="https://wallpaperaccess.com/download/1920-x-1080-anime-2801897" alt=""></span>
+        <span style="--i:4;"><img src="https://wallpaperaccess.com/full/1665843.jpg" alt=""></span>
+        <span style="--i:5;"><img src="https://wallpaperaccess.com/download/1920-x-1080-anime-2801920" alt=""></span>
+        <span style="--i:6;"><img src="https://wallpaperaccess.com/full/2801921.jpg" alt=""></span>
+        <span style="--i:7;"><img src="https://wallpaperaccess.com/full/2801922.jpg" alt=""></span>
+        <span style="--i:8;"><img src="https://wallpaperaccess.com/full/2801922.jpg" alt=""></span>
+    </div>
+
+    <script type="text/javascript">
+        let box = document.querySelector('.box');
+        window.onmousemove = function(e) {
+            let x = e.clientX / 3;
+            box.style.transform = "perspective(1000px) rotateY(" + x + "deg)";
+        };
+    </script>
+</body>
+</html>
